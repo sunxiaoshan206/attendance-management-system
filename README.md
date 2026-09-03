@@ -44,10 +44,29 @@ http://localhost:8080
 
 
 ## 项目截图
+### 登录
+![登录](docs/images/1.png)
+
+### 注册
+![注册](docs/images/2.png)
+
+### 首页
+![首页](docs/images/3.png)
+
+### 打卡页
+![打卡页](docs/images/4.png)
+
+### 请假页
+![请假页](docs/images/5.png)
+
+### 考勤页
+![考勤页](docs/images/6.png)
+
+### 审批页
+![审批页](docs/images/7.png)
 
 
 
-
-
-## 目录结构（按你实际项目改）
+## 目录结构
+![项目结构](docs/images/8.png)
 

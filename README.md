@@ -20,7 +20,7 @@ Java EE 课程设计 / 独立开发 / 2026.06
 
 1. 克隆仓库
 git clone https://github.com/sunxiaoshan206/attendance-management-system.git
-cd attendance-management-system
+
 
 2. 准备 MySQL，导入 src/main/resources 下的 SQL 文件
 数据库名：attendance_db
@@ -68,5 +68,25 @@ http://localhost:8080
 
 
 ## 目录结构
-![项目结构](docs/images/8.png)
+kaoqin/
+├── src/
+│   ├── main/
+│   │   ├── java/com/attendance/
+│   │   │   ├── controller/          # 控制层：处理页面和接口请求
+│   │   │   ├── entity/              # 实体类：对应数据库表
+│   │   │   ├── repository/          # 数据访问层：操作数据库
+│   │   │   ├── service/             # 业务层：核心业务逻辑
+│   │   │   └── KaoqinApplication.java  # 启动类
+│   │   └── resources/
+│   │       ├── static/              # 静态资源（css/js/图片）
+│   │       ├── templates/           # 页面模板
+│   │       └── application.properties  # 项目配置文件
+│   └── test/                        # 测试代码
+├── docs/
+│   └── images/                      # 项目截图
+├── .gitattributes
+├── .gitignore
+├── mvnw
+├── mvnw.cmd
+└── pom.xml                          # Maven 依赖配置
 

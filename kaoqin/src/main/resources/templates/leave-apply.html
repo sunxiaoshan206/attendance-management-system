@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>请假申请</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">请假申请</div>
+                <div class="card-body">
+                    <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+                    <form th:action="@{/leave/apply}" th:object="${leaveRequest}" method="post">
+                        <div class="mb-3">
+                            <label>请假类型</label>
+                            <select th:field="*{type}" class="form-control">
+                                <option value="ANNUAL">年假</option>
+                                <option value="SICK">病假</option>
+                                <option value="PERSONAL">事假</option>
+                                <option value="OTHER">其他</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>开始日期</label>
+                            <input type="date" th:field="*{startDate}" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>结束日期</label>
+                            <input type="date" th:field="*{endDate}" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>请假原因</label>
+                            <textarea th:field="*{reason}" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交申请</button>
+                        <a href="/attendance/dashboard" class="btn btn-secondary">取消</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

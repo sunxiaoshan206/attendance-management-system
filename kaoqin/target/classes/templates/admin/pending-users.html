@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>待审核用户 - 管理员</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>待审核用户</h2>
+    <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
+    <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+    <table class="table table-bordered">
+        <thead><tr><th>ID</th><th>用户名</th><th>真实姓名</th><th>角色</th><th>部门</th><th>操作</th></tr></thead>
+        <tbody>
+        <tr th:each="user : ${pendingUsers}">
+            <td th:text="${user.id}">?<\/td>
+            <td th:text="${user.username}">?<\/td>
+            <td th:text="${user.realName}">?<\/td>
+            <td th:text="${user.role}">?<\/td>
+            <td th:text="${user.department != null ? user.department : '未分配'}">?<\/td>
+            <td>
+                <form th:action="@{/admin/approve/{id}(id=${user.id})}" method="post" style="display:inline">
+                    <button class="btn btn-success btn-sm">通过</button>
+                </form>
+                <form th:action="@{/admin/reject/{id}(id=${user.id})}" method="post" style="display:inline">
+                    <button class="btn btn-danger btn-sm">拒绝</button>
+                </form>
+                <\/td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/attendance/dashboard" class="btn btn-secondary">返回</a>
+</div>
+</body>
+</html>

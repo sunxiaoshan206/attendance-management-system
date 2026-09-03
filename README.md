@@ -18,24 +18,24 @@ Java EE 课程设计 / 独立开发 / 2026.06
 
 ## 运行方式
 
-# 1. 克隆仓库
+1. 克隆仓库
 git clone https://github.com/sunxiaoshan206/attendance-management-system.git
 cd attendance-management-system
 
-# 2. 准备 MySQL，导入 src/main/resources 下的 SQL 文件
-#    数据库名：attendance_db
+2. 准备 MySQL，导入 src/main/resources 下的 SQL 文件
+数据库名：attendance_db
 
-# 3. 修改 src/main/resources/application.properties 中的数据库账号密码
-#    spring.datasource.username=root
-#    spring.datasource.password=123456
+3. 修改 src/main/resources/application.properties 中的数据库账号密码
+spring.datasource.username=root
+spring.datasource.password=123456
 
-# 4. 启动
-# 在 IDEA 中直接运行主启动类
+4. 启动
+在 IDEA 中直接运行主启动类
 
-# 5. 浏览器访问
+5. 浏览器访问
 http://localhost:8080
 
-## 角色与默认账号
+角色与默认账号
 
 | 角色 | 账号 | 密码 | 权限 |
 | 管理员 | admin | admin123 | 全员考勤查看、上下班时间设置、用户审核 |

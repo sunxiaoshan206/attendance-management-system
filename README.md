@@ -23,17 +23,17 @@ git clone https://github.com/sunxiaoshan206/attendance-management-system.git
 cd attendance-management-system
 
 
-3. 准备 MySQL，导入 src/main/resources 下的 SQL 文件
+2. 准备 MySQL，导入 src/main/resources 下的 SQL 文件
 数据库名：attendance_db
 
-4. 修改 src/main/resources/application.properties 中的数据库账号密码
+3. 修改 src/main/resources/application.properties 中的数据库账号密码
 spring.datasource.username=root
 spring.datasource.password=123456
 
-5. 启动
+4. 启动
 在 IDEA 中直接运行主启动类
 
-6. 浏览器访问
+5. 浏览器访问
 http://localhost:8080
 ```
 

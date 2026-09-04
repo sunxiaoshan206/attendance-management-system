@@ -35,6 +35,7 @@ spring.datasource.password=123456
 
 6. 浏览器访问
 http://localhost:8080
+```
 
 角色与默认账号
 
